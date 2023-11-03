@@ -19,3 +19,8 @@ logging:
          max-file-size: 10MB
    file:
       name: "logs/app.log"
+
+      
+consoleapp:
+   option:
+      type: 1
