@@ -16,7 +16,8 @@ public class SofkaChallengeConsoleApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("Iniciando procesos de creación de data");
+		log.info("Iniciando aplicacion");
+
 	}
 
 }
