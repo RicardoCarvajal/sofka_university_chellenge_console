@@ -1,21 +1,15 @@
-![Intelix](https://i.imgur.com/Nb94sn8.png)
+![Intelix](https://i.imgur.com/VD7nJDi.png)
 
-#Practica para capacitacion de Sofka
-###Aplicación de consola
+# Practica para capacitacion de Sofka
+### Aplicación de consola
 
  ![Static Badge](https://img.shields.io/badge/0.0.1-version-%2300bab4) ![Static Badge](https://img.shields.io/badge/0.0.1-release-%2300bab4)
-
-
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
 
 # Configuraciones
 #### Configuración de propertie y de ambiente　
 
 Application.yml
+
 ```
 spring:
    data:
@@ -41,4 +35,4 @@ nombre de variable de entorno para usuario  | USERMONGO
 nombre de variable de entorno para contraseña  | PASSMONGO
 base de datos de autenticación | admin
 
-###End
+### End
