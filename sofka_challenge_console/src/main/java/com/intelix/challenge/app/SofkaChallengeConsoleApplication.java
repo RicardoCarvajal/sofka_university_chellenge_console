@@ -32,7 +32,11 @@ public class SofkaChallengeConsoleApplication implements CommandLineRunner {
 
 		if (propertiesConf.getType() == 1) {
 
+			log.info("Generando precios totales de las ventas");
+
 		} else {
+
+			log.info("Generando productos en una nueva coleccion");
 
 		}
 
