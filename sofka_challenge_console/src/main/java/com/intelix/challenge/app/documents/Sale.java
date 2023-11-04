@@ -1,6 +1,7 @@
 package com.intelix.challenge.app.documents;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -19,6 +20,7 @@ public class Sale {
 
 	@Id
 	private String _id;
+	private Date saleDate;
 	@Field("items")
 	private List<Product> products;
 	private String storeLocation;
