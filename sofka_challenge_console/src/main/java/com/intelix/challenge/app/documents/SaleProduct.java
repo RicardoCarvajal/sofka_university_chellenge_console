@@ -1,28 +1,25 @@
 package com.intelix.challenge.app.documents;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Document(collection = "sales")
+@Document(collection = "products")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Sale {
+@AllArgsConstructor
+@Builder
+public class SaleProduct {
 
 	@Id
 	private String _id;
-	private List<Product> products;
-	private String storeLocation;
-	private Customer customer;
-	private boolean couponUsed;
-	private String purchaseMethod;
-	private BigDecimal total;
+	private String productName;
+	private long quantity;
 
 }
