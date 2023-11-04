@@ -9,7 +9,5 @@ import lombok.Data;
 @Configuration
 @ConfigurationProperties(prefix = "consoleapp.option")
 public class PropertiesConf {
-
 	private int type;
-
 }

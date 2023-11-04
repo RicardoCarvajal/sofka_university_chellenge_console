@@ -1,12 +1,12 @@
 package com.intelix.challenge.app.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.intelix.challenge.app.documents.Sale;
 import com.intelix.challenge.app.repositorys.SaleRepository;
-
-import reactor.core.publisher.Flux;
 
 @Service
 public class SaleService {
@@ -18,7 +18,7 @@ public class SaleService {
 		this.saleRepository = saleRepository;
 	}
 
-	public Flux<Sale> findAllDocuments() {
+	public List<Sale> findAllDocuments() {
 		return saleRepository.findAll();
 	}
 
