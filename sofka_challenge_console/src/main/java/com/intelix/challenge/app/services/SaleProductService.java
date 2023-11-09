@@ -1,13 +1,10 @@
 package com.intelix.challenge.app.services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.intelix.challenge.app.documents.Product;
 import com.intelix.challenge.app.documents.SaleProduct;
 import com.intelix.challenge.app.repositorys.SaleProductRepository;
 import com.intelix.challenge.app.repositorys.SaleRepository;
@@ -32,21 +29,8 @@ public class SaleProductService {
 	}
 
 	public void createCollections() {
-		List<Product> products = new ArrayList<>();
-
-		List<SaleProduct> saleProducts = new ArrayList<>();
-
-		saleRepository.findAll().forEach(sale -> {
-			products.addAll(sale.getProducts());
-		});
-
-		products.stream().collect(Collectors.groupingBy(Product::getName, Collectors.toList()))
-				.forEach((name, productos) -> {
-					log.info("Nombre de articulo: " + name + " Numero de veces vendido: " + productos.size());
-					saleProducts.add(SaleProduct.builder().productName(name).quantity(productos.size()).build());
-				});
-
-		saveDocuments(saleProducts).forEach(pro -> log.info("Producto creado: " + pro.getProductName().toUpperCase()));
+		saleRepository.getReport().ifPresentOrElse(lista -> saveDocuments(lista),
+				() -> System.out.println("Lista no encontrada"));
 	}
 
 }
