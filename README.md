@@ -5,7 +5,6 @@
 
  ![Static Badge](https://img.shields.io/badge/0.0.1-version-%2300bab4) ![Static Badge](https://img.shields.io/badge/0.0.1-release-%2300bab4)
 
-# Configuraciones
 ## Crear una aplicación por consola que permita ejecutar el siguiente job:
 
 1. Tomar todas las facturas que están en la colección Sales y recorriendo la lista de items crear una nueva colección Productos en donde quede un registro por cada producto con la siguiente estructura:
